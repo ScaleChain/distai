@@ -1,2 +1,3 @@
-# distai
-The future of AI
+# dist.ai
+
+Realizes distributed neural networks on blockchain.
