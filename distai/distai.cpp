@@ -3,15 +3,32 @@
 
 #include "stdafx.h"
 
+#include "gtest/gtest.h"
 
-int main()
+#include "mnist/mnist_reader_less.hpp"
+
+#include <boost/locale.hpp>
+#include <iostream>
+#include <ctime>
+
+int main(int argc, char **argv)
 {
+	::testing::InitGoogleTest(&argc, argv);
+	//::testing::GTEST_FLAG(filter) = "Test_Cases1*";
+	auto result = RUN_ALL_TESTS();
+
+	// wait for a key input
+	std::string a;
+	std::cin >> a;
+	return result;
+
 	/*
 	  struct a { int f; };
 	  a x = a{ 1 };
 	*/
 
-	auto mnist = mnist.input_data.read_data_sets("MNIST_data/", true/*one_hot*/);
+	/*
+	auto dataset = mnist::read_dataset();
 
 	auto x = da.placeholder("x", da.types.Float, -1, 784);
 	auto W = da.variable(da.zeros(784, 10));
@@ -38,14 +55,16 @@ int main()
 	{
 		auto correct_prediction = da.equal(da.argmax(y, 1), df.argmax(y_, 1));
 		auto accuracy = da.reduce_mean(da.cast(correct_prediction, da.types.Float));
+		
 
 		std::map<string, const da.types.Tensor&> feed_dict;
-		feed_dict["x"] = mnist.test.images;
-		feed_dict["y_"] = mnist.test.labels;
-
-		auto accuracy_result = sess.run(accuracy, feed_dict);
+		feed_dict["x"] = dataset.test_images;
+		feed_dict["y_"] = dataset.test_labels;
+		
+		auto accuracy_result = sess.run(accuracy, feed_dict ]);
 	}
-
+	
+	*/
 	return 0;
 }
 
