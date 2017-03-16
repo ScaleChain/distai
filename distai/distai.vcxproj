@@ -140,10 +140,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mnist\mnist_reader.hpp" />
-    <ClInclude Include="mnist\mnist_reader_common.hpp" />
-    <ClInclude Include="mnist\mnist_reader_less.hpp" />
-    <ClInclude Include="mnist\mnist_utils.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>

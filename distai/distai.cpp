@@ -3,13 +3,15 @@
 
 #include "stdafx.h"
 
-#include "gtest/gtest.h"
-
-#include "mnist/mnist_reader_less.hpp"
-
 #include <boost/locale.hpp>
 #include <iostream>
 #include <ctime>
+
+#include "gtest/gtest.h"
+#include "da/da.h"
+
+
+using namespace da;
 
 int main(int argc, char **argv)
 {
@@ -27,44 +29,43 @@ int main(int argc, char **argv)
 	  a x = a{ 1 };
 	*/
 
-	/*
-	auto dataset = mnist::read_dataset();
+	auto dataset = dataset::mnist::read_dataset();
 
-	auto x = da.placeholder("x", da.types.Float, -1, 784);
-	auto W = da.variable(da.zeros(784, 10));
-	auto b = da.variable(da.zeros(10));
+	auto x = graph::placeholder("x", type::Float, {-1, 784 } );
+	auto W = graph::variable(graph::zeros( { 784, 10 } ));
+	auto b = graph::variable(graph::zeros( { 10} ));
 
-	auto y = da.nn.softmax(da.matmul(x, W) + b);
-	auto y_ = da.placeholder("y_", da.types.Float, -1, 10);
+	auto y = graph::fun::softmax(graph::fun::matadd(graph::fun::matmul(M(x), M(W)), M(b)));
+	auto y_ = graph::placeholder("y_", type::Float, { -1, 10 });
 
-	auto cross_entropy = -da.reduce_sum(y_ * da.log(y));
-	auto train_step = da.train.GradientDescentOptimizer(0.01).minimize(cross_entropy);
+	auto cross_entropy = graph::fun::negate(graph::fun::reduce_sum(graph::fun::rowmul( M(y_), graph::fun::log( M(y) )) ) );
+	auto optimizer = graph::opt::GradientDescentOptimizer::create(0.01f);
+	auto train_step = optimizer->minimize( M(cross_entropy) );
 
-	auto sess = da.Session();
-	auto sess.run(da.initialize_all_variables())
+	auto sess = runtime::Session::create();
+	train_step->initialize();
 
 	for (int i = 0; i < 1000; i++) {
-		auto batch = mnist.train.next_batch(100);
-		std::map<string, const da.types.Tensor&> feed_dict;
-		feed_dict["x"] = batch.xs;
-		feed_dict["y_"] = batch.ys;
+		auto batch = dataset::mnist::train::next_train_batch(dataset, 100);
+		std::map<string, shared_ptr<runtime::Tensor>> feed_dict;
+		feed_dict["x"] = runtime::converter::toTensor(batch->images);
+		feed_dict["y_"] = runtime::converter::toTensor(batch->labels);
 
-		sess.run(train_step, feed_dict);
+		sess->run( M(train_step), feed_dict);
 	}
 
 	{
-		auto correct_prediction = da.equal(da.argmax(y, 1), df.argmax(y_, 1));
-		auto accuracy = da.reduce_mean(da.cast(correct_prediction, da.types.Float));
+		auto correct_prediction = graph::fun::equal(graph::fun::argmax( M(y), 1), graph::fun::argmax( M(y_), 1));
+		auto accuracy = graph::fun::reduce_mean(graph::fun::cast( M(correct_prediction), type::Float));
 		
 
-		std::map<string, const da.types.Tensor&> feed_dict;
-		feed_dict["x"] = dataset.test_images;
-		feed_dict["y_"] = dataset.test_labels;
+		std::map<string, shared_ptr<runtime::Tensor>> feed_dict;
+		feed_dict["x"] = runtime::converter::toTensor(dataset.test_images);
+		feed_dict["y_"] = runtime::converter::toTensor(dataset.test_labels);
 		
-		auto accuracy_result = sess.run(accuracy, feed_dict ]);
+		auto accuracy_result = sess->run( M(accuracy), feed_dict);
 	}
 	
-	*/
 	return 0;
 }
 

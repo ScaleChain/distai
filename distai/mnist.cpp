@@ -1,12 +1,12 @@
 #include "stdafx.h"
 #include "gtest/gtest.h"
-#include "mnist/mnist_reader_less.hpp"
+#include "da/dataset/mnist/mnist_reader_less.hpp"
 //#include "mnist/mnist_reader.hpp"
 #include "boost/filesystem.hpp"
 
 TEST(MNISTTest, read) {
 	//std::cout << boost::filesystem::current_path();
-	auto dataset = mnist::read_dataset();
+	auto dataset = da::dataset::mnist::read_dataset();
 
 	std::cout << "dataset loaded" << std::endl;
 	std::cout << "test images count : " << dataset.test_images.size() << std::endl;

@@ -16,9 +16,6 @@
     <Filter Include="Source Files\gtest">
       <UniqueIdentifier>{a807fde5-270f-40e3-a368-e567f3f54096}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\mnist">
-      <UniqueIdentifier>{8ca36b8b-8049-4a28-a3d5-3af7aeddac85}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -29,18 +26,6 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mnist\mnist_reader.hpp">
-      <Filter>Header Files\mnist</Filter>
-    </ClInclude>
-    <ClInclude Include="mnist\mnist_reader_common.hpp">
-      <Filter>Header Files\mnist</Filter>
-    </ClInclude>
-    <ClInclude Include="mnist\mnist_reader_less.hpp">
-      <Filter>Header Files\mnist</Filter>
-    </ClInclude>
-    <ClInclude Include="mnist\mnist_utils.hpp">
-      <Filter>Header Files\mnist</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
