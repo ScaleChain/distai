@@ -8,6 +8,7 @@ Before the ICO, we plan to develop a working prototype first to make sure our id
 The valuation of the altcoin is not decided yet, and also we will write our whitepaper based on our experiments done in our test environment.
 
 Our plan :
+
 1) M1 : Release an initial version without AI integrated.
 
 The initial release is to make sure basic blockchain features such as consensus on blocks, transaction issuance, and token(asset) issuance work well. 
