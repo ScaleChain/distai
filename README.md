@@ -27,7 +27,7 @@ Run expertiments, validate assumptions, resolve major open issues, and publish a
 
 5) ICO fundraising
 
-Start ICO fundraising to raise fund for assuring quality, and building AI services on top of dist.ai blockchain. 
+Start ICO fundraising to raise funds for assuring quality of dist.ai, and building AI services on top of dist.ai blockchain. 
 
 6) M3 : Final release
 
