@@ -17,7 +17,7 @@ The initial release is to make sure basic blockchain features such as consensus 
 
 Anyone can participate in the experiments based on the M1 initial release.
 
-3) M2 : Release the second version with AI integrated.
+3) M2: Release the second version with AI integrated.
 
 The second version integrates AI into blockchain. Like you run Dapps on Ethereum blockchain, you will be able to run AI apps on dist.ai blockchain such as speech recognition, object identification, image transcription, question answering, etc.
 
