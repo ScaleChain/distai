@@ -3,7 +3,7 @@
 Realize distributed neural networks on the blockchain. Robots will be able to spend, save, invest, and think using dist.ai.
 Dist.ai is an altcoin that integrates deep learning into blockchain. 
 
-Before the ICO, we plan to develop a working prototype first to make sure our idea works and to reduce the risk of investors that participate in ICO. It is going to take time. 
+Before the ICO, we plan to develop a working prototype first to make sure our idea works and to reduce the risk of investors that participate in the ICO. It is going to take time. 
 
 The valuation of the altcoin is not decided yet, and also we will write our whitepaper based on our experiments done in our test environment.
 
@@ -19,7 +19,7 @@ Anyone can participate in the experiments based on the M1 initial release.
 
 3) M2: Release the second version with AI integrated.
 
-The second version integrates AI into blockchain. Like you run Dapps on Ethereum blockchain, you will be able to run AI apps on dist.ai blockchain such as speech recognition, object identification, image transcription, question answering, etc.
+The second version integrates AI into blockchain. Like you run DApps on Ethereum blockchain, you will be able to run AI apps on dist.ai blockchain such as speech recognition, object identification, image transcription, question answering, etc.
 
 4) Publish a technical whitepaper.
 
@@ -27,7 +27,7 @@ Run experiments, validate assumptions, resolve major open issues, and publish a 
 
 5) ICO fundraising
 
-Start ICO fundraising to raise funds for assuring the quality of dist.ai, and building AI services on top of the dist.ai blockchain. 
+Start the ICO fundraising to raise funds for assuring the quality of dist.ai, and building AI services on top of the dist.ai blockchain. 
 
 6) M3: Final release
 
