@@ -13,6 +13,8 @@ Our plan:
 
 The initial release is to make sure basic blockchain features such as consensus on blocks, transaction issuance, and token(asset) issuance work well. 
 
+After launching the M1 version of dist.ai, we may decide to do a closed pre-ICO only with people who sent an email to support@scalechain.io by the time of M1 release. 
+
 2) Open testnet for a sandbox.
 
 Anyone can participate in the experiments based on the M1 initial release.
