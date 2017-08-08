@@ -13,7 +13,7 @@ Our plan:
 
 The initial release is to make sure basic blockchain features such as consensus on blocks, transaction issuance, and token(asset) issuance work well. 
 
-After launching the M1 version of dist.ai, we may decide to do a closed pre-ICO only with people who sent an email to support@scalechain.io by the time of M1 release. 
+After launching the M1 version of dist.ai, we may decide to do sell coins only to people who sent an email to support@scalechain.io by the time of M1 release. 
 
 2) Open testnet for a sandbox.
 
@@ -27,11 +27,7 @@ The second version integrates AI into blockchain. Like you run DApps on Ethereum
 
 Run experiments, validate assumptions, resolve major open issues, and publish a technical whitepaper.
 
-5) ICO fundraising
-
-Start the ICO fundraising to raise funds for assuring the quality of dist.ai, and building AI services on top of the dist.ai blockchain. 
-
-6) M3: Final release
+5) M3: Final release
 
 Release the final version on mainnet as well as testnet.
 
