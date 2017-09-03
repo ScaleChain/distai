@@ -3,7 +3,7 @@
 Realize distributed neural networks on the blockchain. Robots will be able to spend, save, invest, and think using dist.ai.
 Dist.ai is an altcoin that integrates deep learning into blockchain. 
 
-Before the ICO, we plan to develop a working prototype first to make sure our idea works and to reduce the risk of investors that participate in the ICO. It is going to take time. 
+We plan to develop a working prototype first to make sure our idea works. It is going to take time. 
 
 The valuation of the altcoin is not decided yet, and also we will write our whitepaper based on our experiments done in our test environment.
 
